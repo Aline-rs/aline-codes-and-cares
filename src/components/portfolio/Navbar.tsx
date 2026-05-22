@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import alinePhoto from "@/assets/aline.jpg";
 
 const links = [
   { href: "#inicio", label: "Início" },
@@ -31,8 +32,12 @@ export function Navbar() {
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#inicio" className="group flex items-center gap-2 font-semibold">
-          <span className="inline-block h-8 w-8 rounded-md bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground font-bold transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
-            A
+          <span className="inline-block h-9 w-9 rounded-full overflow-hidden ring-2 ring-primary/40 transition-transform duration-300 group-hover:scale-110 group-hover:ring-primary">
+            <img
+              src={alinePhoto}
+              alt="Aline Rosa"
+              className="h-full w-full object-cover"
+            />
           </span>
           <span className="hidden sm:inline group-hover:text-primary transition-colors">Aline Rosa</span>
         </a>
