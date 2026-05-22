@@ -23,12 +23,6 @@ export function About() {
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-            <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-xs font-medium text-foreground/90">
-                Belo Horizonte, MG
-              </span>
-            </div>
           </div>
         </div>
 
