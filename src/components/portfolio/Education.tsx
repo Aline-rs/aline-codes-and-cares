@@ -29,14 +29,14 @@ export function Education() {
         {studies.map((s) => (
           <div
             key={s.school}
-            className="rounded-xl border border-border bg-card p-6 hover:border-primary/40 transition"
+            className="group rounded-xl border border-border bg-card p-6 card-hover"
           >
             <div className="flex items-start gap-4">
-              <span className="h-11 w-11 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground shrink-0">
+              <span className="h-11 w-11 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground shrink-0 icon-pop">
                 <GraduationCap size={20} />
               </span>
               <div>
-                <h3 className="font-semibold text-foreground">{s.school}</h3>
+                <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">{s.school}</h3>
                 <p className="text-sm text-muted-foreground mt-1">{s.degree}</p>
                 <p className="text-xs text-muted-foreground mt-2">{s.period}</p>
               </div>
@@ -52,9 +52,9 @@ export function Education() {
         {certs.map((c) => (
           <li
             key={c}
-            className="rounded-lg border border-border bg-card px-4 py-3 text-sm text-muted-foreground flex gap-3 items-start"
+            className="rounded-lg border border-border bg-card px-4 py-3 text-sm text-muted-foreground flex gap-3 items-start lift hover:border-primary/50 hover:text-foreground cursor-default"
           >
-            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary shrink-0 transition-transform duration-300 hover:scale-150" />
             <span>{c}</span>
           </li>
         ))}

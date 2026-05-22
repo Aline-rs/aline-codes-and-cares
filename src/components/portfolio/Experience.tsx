@@ -65,14 +65,14 @@ export function Experience() {
     >
       <ol className="relative border-l border-border ml-3 space-y-10">
         {experiences.map((exp, i) => (
-          <li key={i} className="pl-8 relative">
-            <span className="absolute -left-[13px] top-1 h-6 w-6 rounded-full bg-[image:var(--gradient-primary)] border-4 border-background grid place-items-center">
+          <li key={i} className="pl-8 relative group">
+            <span className="absolute -left-[13px] top-1 h-6 w-6 rounded-full bg-[image:var(--gradient-primary)] border-4 border-background grid place-items-center transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12">
               <Briefcase size={10} className="text-primary-foreground" />
             </span>
 
-            <div className="rounded-xl border border-border bg-card p-6 hover:border-primary/40 transition-colors">
+            <div className="rounded-xl border border-border bg-card p-6 card-hover">
               <div className="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-                <h3 className="text-lg md:text-xl font-semibold text-foreground">
+                <h3 className="text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                   {exp.role}
                 </h3>
                 <span className="text-xs px-2 py-1 rounded-md bg-muted text-muted-foreground font-medium">
@@ -88,9 +88,9 @@ export function Experience() {
                 {exp.points.map((p) => (
                   <li
                     key={p}
-                    className="text-sm text-muted-foreground flex gap-3 leading-relaxed"
+                    className="text-sm text-muted-foreground flex gap-3 leading-relaxed transition-colors hover:text-foreground"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0 transition-transform duration-300 hover:scale-150" />
                     <span>{p}</span>
                   </li>
                 ))}

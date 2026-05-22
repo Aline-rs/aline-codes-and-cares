@@ -41,19 +41,19 @@ export function Skills() {
         {groups.map(({ icon: Icon, title, items }) => (
           <div
             key={title}
-            className="rounded-xl border border-border bg-card p-6 hover:border-primary/40 transition"
+            className="group rounded-xl border border-border bg-card p-6 card-hover"
           >
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-10 w-10 rounded-lg bg-muted grid place-items-center text-primary">
+              <span className="h-10 w-10 rounded-lg bg-muted grid place-items-center text-primary icon-pop group-hover:bg-[image:var(--gradient-primary)] group-hover:text-primary-foreground">
                 <Icon size={18} />
               </span>
-              <h3 className="font-semibold text-foreground">{title}</h3>
+              <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">{title}</h3>
             </div>
             <div className="flex flex-wrap gap-2">
               {items.map((it) => (
                 <span
                   key={it}
-                  className="text-xs font-medium px-3 py-1.5 rounded-md bg-muted text-foreground border border-border"
+                  className="text-xs font-medium px-3 py-1.5 rounded-md bg-muted text-foreground border border-border tag-hover cursor-default"
                 >
                   {it}
                 </span>

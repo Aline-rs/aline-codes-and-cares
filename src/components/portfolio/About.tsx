@@ -36,12 +36,12 @@ export function About() {
           {highlights.map(({ icon: Icon, label }) => (
             <li
               key={label}
-              className="rounded-xl border border-border bg-card p-5 hover:border-primary/50 transition-colors"
+              className="group rounded-xl border border-border bg-card p-5 card-hover cursor-default"
             >
-              <div className="h-10 w-10 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground mb-3">
+              <div className="h-10 w-10 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground mb-3 icon-pop">
                 <Icon size={18} />
               </div>
-              <p className="text-sm font-medium text-foreground leading-snug">
+              <p className="text-sm font-medium text-foreground leading-snug group-hover:text-primary transition-colors">
                 {label}
               </p>
             </li>

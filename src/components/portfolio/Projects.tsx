@@ -34,18 +34,18 @@ export function Projects() {
         {projects.map((p) => (
           <article
             key={p.title}
-            className="group rounded-xl border border-border bg-card p-6 flex flex-col hover:border-primary/50 transition-all hover:-translate-y-1"
+            className="group rounded-xl border border-border bg-card p-6 flex flex-col card-hover"
           >
             <div className="flex items-start justify-between mb-3">
-              <div className="h-10 w-10 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground">
+              <div className="h-10 w-10 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground icon-pop">
                 <Github size={18} />
               </div>
               <ArrowUpRight
                 size={18}
-                className="text-muted-foreground group-hover:text-primary transition"
+                className="text-muted-foreground group-hover:text-primary transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
               />
             </div>
-            <h3 className="text-lg font-semibold text-foreground mb-2">
+            <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
               {p.title}
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">
@@ -55,7 +55,7 @@ export function Projects() {
               {p.tags.map((t) => (
                 <span
                   key={t}
-                  className="text-[11px] font-medium px-2 py-1 rounded bg-muted text-muted-foreground border border-border"
+                  className="text-[11px] font-medium px-2 py-1 rounded bg-muted text-muted-foreground border border-border tag-hover cursor-default"
                 >
                   {t}
                 </span>
@@ -65,9 +65,10 @@ export function Projects() {
               href="https://github.com/Aline-rs"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary group/link"
             >
-              Ver no GitHub <ArrowUpRight size={14} />
+              <span className="story-link">Ver no GitHub</span>
+              <ArrowUpRight size={14} className="transition-transform duration-300 group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
             </a>
           </article>
         ))}

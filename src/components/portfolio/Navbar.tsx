@@ -30,11 +30,11 @@ export function Navbar() {
       }`}
     >
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#inicio" className="flex items-center gap-2 font-semibold">
-          <span className="inline-block h-8 w-8 rounded-md bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground font-bold">
+        <a href="#inicio" className="group flex items-center gap-2 font-semibold">
+          <span className="inline-block h-8 w-8 rounded-md bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground font-bold transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
             A
           </span>
-          <span className="hidden sm:inline">Aline Rosa</span>
+          <span className="hidden sm:inline group-hover:text-primary transition-colors">Aline Rosa</span>
         </a>
 
         <ul className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
@@ -42,7 +42,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="hover:text-foreground transition-colors"
+                className="nav-link hover:text-foreground transition-colors"
               >
                 {l.label}
               </a>
@@ -52,7 +52,7 @@ export function Navbar() {
 
         <a
           href="#contato"
-          className="hidden md:inline-flex items-center rounded-md px-4 py-2 text-sm font-medium bg-[image:var(--gradient-primary)] text-primary-foreground hover:opacity-90 transition"
+          className="hidden md:inline-flex items-center rounded-md px-4 py-2 text-sm font-medium bg-[image:var(--gradient-primary)] text-primary-foreground btn-shine"
         >
           Contato
         </a>
