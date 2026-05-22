@@ -11,7 +11,7 @@ export function Footer() {
           <a
             href="mailto:alinerosa_s@hotmail.com"
             aria-label="E-mail"
-            className="h-9 w-9 grid place-items-center rounded-md border border-border bg-card hover:border-primary/50 transition"
+            className="h-9 w-9 grid place-items-center rounded-md border border-border bg-card hover:border-primary/50 hover:text-primary lift"
           >
             <Mail size={16} />
           </a>
@@ -20,7 +20,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
-            className="h-9 w-9 grid place-items-center rounded-md border border-border bg-card hover:border-primary/50 transition"
+            className="h-9 w-9 grid place-items-center rounded-md border border-border bg-card hover:border-primary/50 hover:text-primary lift"
           >
             <Linkedin size={16} />
           </a>
@@ -29,7 +29,7 @@ export function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
-            className="h-9 w-9 grid place-items-center rounded-md border border-border bg-card hover:border-primary/50 transition"
+            className="h-9 w-9 grid place-items-center rounded-md border border-border bg-card hover:border-primary/50 hover:text-primary lift"
           >
             <Github size={16} />
           </a>

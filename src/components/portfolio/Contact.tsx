@@ -23,14 +23,14 @@ export function Contact() {
         <div className="space-y-3">
           <a
             href="mailto:alinerosa_s@hotmail.com"
-            className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 hover:border-primary/50 transition"
+            className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 card-hover"
           >
-            <span className="h-11 w-11 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground">
+            <span className="h-11 w-11 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground icon-pop">
               <Mail size={18} />
             </span>
             <div className="min-w-0">
               <p className="text-xs text-muted-foreground">E-mail</p>
-              <p className="text-sm font-medium text-foreground truncate">
+              <p className="text-sm font-medium text-foreground truncate group-hover:text-primary transition-colors">
                 alinerosa_s@hotmail.com
               </p>
             </div>
@@ -40,14 +40,14 @@ export function Contact() {
             href="https://www.linkedin.com/in/alinerosas"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 hover:border-primary/50 transition"
+            className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 card-hover"
           >
-            <span className="h-11 w-11 rounded-lg bg-muted grid place-items-center text-primary">
+            <span className="h-11 w-11 rounded-lg bg-muted grid place-items-center text-primary icon-pop group-hover:bg-[image:var(--gradient-primary)] group-hover:text-primary-foreground">
               <Linkedin size={18} />
             </span>
             <div>
               <p className="text-xs text-muted-foreground">LinkedIn</p>
-              <p className="text-sm font-medium text-foreground">/in/alinerosas</p>
+              <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">/in/alinerosas</p>
             </div>
           </a>
 
@@ -55,14 +55,14 @@ export function Contact() {
             href="https://github.com/Aline-rs"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-4 rounded-xl border border-border bg-card p-4 hover:border-primary/50 transition"
+            className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 card-hover"
           >
-            <span className="h-11 w-11 rounded-lg bg-muted grid place-items-center text-primary">
+            <span className="h-11 w-11 rounded-lg bg-muted grid place-items-center text-primary icon-pop group-hover:bg-[image:var(--gradient-primary)] group-hover:text-primary-foreground">
               <Github size={18} />
             </span>
             <div>
               <p className="text-xs text-muted-foreground">GitHub</p>
-              <p className="text-sm font-medium text-foreground">Aline-rs</p>
+              <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">Aline-rs</p>
             </div>
           </a>
         </div>
@@ -104,9 +104,10 @@ export function Contact() {
           <div className="flex items-center justify-between gap-4 flex-wrap">
             <button
               type="submit"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[image:var(--gradient-primary)] text-primary-foreground font-medium hover:opacity-90 transition glow"
+              className="group inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[image:var(--gradient-primary)] text-primary-foreground font-medium glow btn-shine"
             >
-              <Send size={16} /> Enviar mensagem
+              <Send size={16} className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5" />
+              Enviar mensagem
             </button>
             {sent && (
               <span className="inline-flex items-center gap-2 text-sm text-accent font-medium">

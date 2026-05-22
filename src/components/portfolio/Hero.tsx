@@ -37,13 +37,14 @@ export function Hero() {
           <div className="flex flex-wrap gap-3">
             <a
               href="#experiencia"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[image:var(--gradient-primary)] text-primary-foreground font-medium hover:opacity-90 transition glow"
+              className="group inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[image:var(--gradient-primary)] text-primary-foreground font-medium glow btn-shine"
             >
-              Ver experiências <ArrowRight size={16} />
+              Ver experiências
+              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
             </a>
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-border bg-card/50 text-foreground font-medium hover:bg-card transition"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-md border border-border bg-card/50 text-foreground font-medium hover:bg-card hover:border-primary/50 lift"
             >
               <Mail size={16} /> Entrar em contato
             </a>
@@ -52,7 +53,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="GitHub de Aline Rosa"
-              className="inline-flex items-center justify-center h-11 w-11 rounded-md border border-border bg-card/50 hover:bg-card transition"
+              className="inline-flex items-center justify-center h-11 w-11 rounded-md border border-border bg-card/50 hover:bg-card hover:border-primary/50 hover:text-primary lift"
             >
               <Github size={18} />
             </a>
@@ -61,7 +62,7 @@ export function Hero() {
               target="_blank"
               rel="noreferrer"
               aria-label="LinkedIn de Aline Rosa"
-              className="inline-flex items-center justify-center h-11 w-11 rounded-md border border-border bg-card/50 hover:bg-card transition"
+              className="inline-flex items-center justify-center h-11 w-11 rounded-md border border-border bg-card/50 hover:bg-card hover:border-primary/50 hover:text-primary lift"
             >
               <Linkedin size={18} />
             </a>
@@ -73,12 +74,12 @@ export function Hero() {
         </div>
 
         <div className="relative animate-fade-up [animation-delay:120ms]">
-          <div className="absolute -inset-4 bg-[image:var(--gradient-primary)] opacity-20 blur-2xl rounded-3xl" />
-          <div className="relative rounded-2xl border border-border bg-card p-6 shadow-2xl">
+          <div className="absolute -inset-4 bg-[image:var(--gradient-primary)] opacity-20 blur-2xl rounded-3xl float-slow" />
+          <div className="group relative rounded-2xl border border-border bg-card p-6 shadow-2xl transition-transform duration-500 hover:-translate-y-2 hover:rotate-[-0.5deg] hover:border-primary/40">
             <div className="flex items-center gap-2 pb-4 border-b border-border">
-              <span className="h-3 w-3 rounded-full bg-destructive/70" />
-              <span className="h-3 w-3 rounded-full bg-chart-4/70" />
-              <span className="h-3 w-3 rounded-full bg-accent/70" />
+              <span className="h-3 w-3 rounded-full bg-destructive/70 transition-transform duration-300 group-hover:scale-125" />
+              <span className="h-3 w-3 rounded-full bg-chart-4/70 transition-transform duration-300 delay-75 group-hover:scale-125" />
+              <span className="h-3 w-3 rounded-full bg-accent/70 transition-transform duration-300 delay-150 group-hover:scale-125" />
               <span className="ml-3 text-xs text-muted-foreground font-mono">
                 aline.cs
               </span>
@@ -103,7 +104,7 @@ namespace Portfolio
               {stack.map((s) => (
                 <span
                   key={s}
-                  className="px-3 py-1 rounded-md text-xs font-medium bg-muted text-foreground border border-border"
+                  className="px-3 py-1 rounded-md text-xs font-medium bg-muted text-foreground border border-border tag-hover cursor-default"
                 >
                   {s}
                 </span>
