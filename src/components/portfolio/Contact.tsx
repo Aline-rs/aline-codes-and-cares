@@ -25,7 +25,7 @@ export function Contact() {
             href="mailto:alinerosa_s@hotmail.com"
             className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 card-hover"
           >
-            <span className="h-11 w-11 rounded-lg bg-[image:var(--gradient-primary)] grid place-items-center text-primary-foreground icon-pop">
+            <span className="h-11 w-11 rounded-lg bg-muted grid place-items-center text-primary icon-pop group-hover:bg-[image:var(--gradient-primary)] group-hover:text-primary-foreground">
               <Mail size={18} />
             </span>
             <div className="min-w-0">
