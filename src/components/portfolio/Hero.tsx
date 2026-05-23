@@ -1,6 +1,7 @@
-import { Github, Linkedin, ArrowRight, Mail } from "lucide-react";
+import { Github, Linkedin, ArrowRight, Mail, MessageCircle } from "lucide-react";
 
 const stack = ["C#", ".NET", "SQL", "Cypress", "Postman", "Git"];
+const whatsappHref = "https://wa.me/5531982648115";
 
 export function Hero() {
   return (
@@ -40,7 +41,10 @@ export function Hero() {
               className="group inline-flex items-center gap-2 px-5 py-3 rounded-md bg-[image:var(--gradient-primary)] text-primary-foreground font-medium glow btn-shine"
             >
               Ver experiências
-              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
+              <ArrowRight
+                size={16}
+                className="transition-transform duration-300 group-hover:translate-x-1.5"
+              />
             </a>
             <a
               href="#contato"
@@ -66,11 +70,18 @@ export function Hero() {
             >
               <Linkedin size={18} />
             </a>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp de Aline Rosa"
+              className="inline-flex items-center justify-center h-11 w-11 rounded-md border border-border bg-card/50 hover:bg-card hover:border-primary/50 hover:text-primary lift"
+            >
+              <MessageCircle size={18} />
+            </a>
           </div>
 
-          <p className="mt-8 text-sm text-muted-foreground">
-            Belo Horizonte, MG — Brasil
-          </p>
+          <p className="mt-8 text-sm text-muted-foreground">Belo Horizonte, MG — Brasil</p>
         </div>
 
         <div className="relative animate-fade-up [animation-delay:120ms]">
@@ -80,12 +91,10 @@ export function Hero() {
               <span className="h-3 w-3 rounded-full bg-destructive/70 transition-transform duration-300 group-hover:scale-125" />
               <span className="h-3 w-3 rounded-full bg-chart-4/70 transition-transform duration-300 delay-75 group-hover:scale-125" />
               <span className="h-3 w-3 rounded-full bg-accent/70 transition-transform duration-300 delay-150 group-hover:scale-125" />
-              <span className="ml-3 text-xs text-muted-foreground font-mono">
-                aline.cs
-              </span>
+              <span className="ml-3 text-xs text-muted-foreground font-mono">aline.cs</span>
             </div>
             <pre className="mt-4 text-sm font-mono leading-relaxed text-muted-foreground overflow-x-auto">
-{`using System;
+              {`using System;
 
 namespace Portfolio
 {
