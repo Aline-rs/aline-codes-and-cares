@@ -1,4 +1,5 @@
-import { Github, Linkedin, ArrowRight, Mail, MessageCircle } from "lucide-react";
+import { Github, Linkedin, ArrowRight, Mail } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 const stack = ["C#", ".NET", "SQL", "Cypress", "Postman", "Git"];
 const whatsappHref = "https://wa.me/5531982648115";
@@ -77,7 +78,7 @@ export function Hero() {
               aria-label="WhatsApp de Aline Rosa"
               className="inline-flex items-center justify-center h-11 w-11 rounded-md border border-border bg-card/50 hover:bg-card hover:border-primary/50 hover:text-primary lift"
             >
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
             </a>
           </div>
 

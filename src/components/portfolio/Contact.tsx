@@ -1,14 +1,7 @@
 import { useRef, useState, type FormEvent } from "react";
 import { Section } from "./Section";
-import {
-  Mail,
-  Github,
-  Linkedin,
-  Send,
-  CheckCircle2,
-  AlertCircle,
-  MessageCircle,
-} from "lucide-react";
+import { Mail, Github, Linkedin, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { WhatsAppIcon } from "./WhatsAppIcon";
 
 type SubmitStatus = "idle" | "sending" | "success" | "error";
 const whatsappHref = "https://wa.me/5531982648115";
@@ -114,12 +107,12 @@ export function Contact() {
             className="group flex items-center gap-4 rounded-xl border border-border bg-card p-4 card-hover"
           >
             <span className="h-11 w-11 rounded-lg bg-muted grid place-items-center text-primary icon-pop group-hover:bg-[image:var(--gradient-primary)] group-hover:text-primary-foreground">
-              <MessageCircle size={18} />
+              <WhatsAppIcon size={18} />
             </span>
             <div>
               <p className="text-xs text-muted-foreground">WhatsApp</p>
               <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                +55 31 98264-8115
+                Me mande uma mensagem no WhatsApp
               </p>
             </div>
           </a>
