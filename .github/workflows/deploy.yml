@@ -33,6 +33,17 @@ jobs:
       - name: Build project
         run: bun run build
 
+      - name: Show build output
+        run: |
+          echo "Arquivos na raiz:"
+          ls -la
+
+          echo "Procurando index.html:"
+          find . -name "index.html"
+
+          echo "Pastas principais:"
+          find . -maxdepth 3 -type d
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
